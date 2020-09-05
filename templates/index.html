@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Flight Fare Price Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Flight Price Prediction</h1>
+  <p>This is an application for predicting flight prices based on <a href='https://www.kaggle.com/nikhilmittal/flight-fare-prediction-mh/' >2019 flight dataset</a></p> 
+</div>
+  
+<div class="container">
+    <form action="/predict" method="post">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="Airline">Airline:</label>
+                    <select class="form-control" id="Airline" name='Airline' required>
+                      <option>Jet Airways</option>
+                      <option>IndiGo</option>
+                      <option>Air India</option>
+                      <option>Multiple carriers</option>
+                      <option>SpiceJet</option>
+                      <option>Vistara</option>
+                      <option>Air Asia</option>
+                      <option>GoAir</option>
+                      <option>Multiple carriers Premium economy</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="Date Of Journey">Date Of Journey:</label>
+                    <input type="date" name="Date_of_Journey" class="form-control" placeholder="dd/mm/yyyy" required/>
+                  </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="Total_Stops">Total_Stops:</label>
+                    <select class="form-control" id="Total_Stops" name='Total_Stops' required>
+                        <option>1 stop</option>
+                        <option>non-stop</option>
+                        <option>2 stops</option>
+                        <option>3 stops</option>
+                      </select>
+                  </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="Departure Time">Departure time:</label>
+                    <input type="time" name="Dep_Time" class="form-control" title="HH:MM:AM/PM" required/>
+                  </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="Arrival_Time">Arrival_Time:</label>
+                    <input type="time" name="Arrival_Time" class="form-control" title="HH:MM:AM/PM" required/>
+                  </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="Source">Source:</label>
+                    <select class="form-control" id="Source" name='Source' required>
+                      <option>Delhi</option>
+                      <option>Kolkata</option>
+                      <option>Banglore</option>
+                      <option>Mumbai</option>
+                      <option>Chennai</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="Destination">Destination:</label>
+                    <select class="form-control" id="Destination" name='Destination' required>
+                      <option>Cochin</option>
+                      <option>Banglore</option>
+                      <option>Delhi</option>
+                      <option>New Delhi</option>
+                      <option>Hyderabad</option>
+                      <option>Kolkata</option>
+                    </select>
+                  </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Predict</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+    </form>
+    <br>
+        <br>
+        <h3>{{ prediction_text }}</h3>
+
+        <br>
+        <br>
+        <p>©2020 Rahul Chugh</p>
+</div>
+</body>
+</html>
+
