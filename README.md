@@ -12,9 +12,9 @@ Predicts price of the flight
 
 ## Demo
 
-![alt text](https://github.com/chugh007/FlightPricePrediction/blob/master/images/demo1.jpg?raw=true)
+![alt text](https://github.com/chugh007/FlightPricePrediction/blob/master/images/demo1.png?raw=true)
 
-![alt text](https://github.com/chugh007/FlightPricePrediction/blob/master/images/demo2.jpg?raw=true)
+![alt text](https://github.com/chugh007/FlightPricePrediction/blob/master/images/demo2.png?raw=true)
 
 
 ## Setup
